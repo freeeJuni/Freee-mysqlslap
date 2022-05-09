@@ -1,0 +1,1 @@
+SELECT employees.* FROM employees LEFT JOIN dept_emp ON ( dept_emp.emp_no = employees.emp_no ) LEFT JOIN salaries ON ( salaries.emp_no = salaries.emp_no ) WHERE salaries.to_date < CURRENT_TIMESTAMP - INTERVAL FLOOR(RAND() * 15000 * 24 * 60 *60) SECOND;
